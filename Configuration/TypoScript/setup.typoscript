@@ -1,0 +1,100 @@
+plugin.tx_blog.singlePid = 0
+plugin.tx_blog.listPid = 0
+plugin.tx_blog_latest.persistence.storagePid = 0
+plugin.tx_blog_list.persistence.storagePid = 0
+plugin.tx_blog_show.persistence.storagePid = 0
+
+plugin.tx_blog_latest {
+    view {
+        templateRootPaths.0 = EXT:blog/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_blog_latest.view.templateRootPath}
+        partialRootPaths.0 = EXT:blog/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_blog_latest.view.partialRootPath}
+        layoutRootPaths.0 = EXT:blog/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_blog_latest.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_blog_latest.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+    settings {
+        listPid = 0
+        singlePid = 0
+    }
+}
+plugin.tx_blog_list {
+    view {
+        templateRootPaths.0 = EXT:blog/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_blog_list.view.templateRootPath}
+        partialRootPaths.0 = EXT:blog/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_blog_list.view.partialRootPath}
+        layoutRootPaths.0 = EXT:blog/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_blog_list.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_blog_list.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+    settings {
+        listPid = 0
+        singlePid = 0
+    }
+}
+plugin.tx_blog_show {
+    view {
+        templateRootPaths.0 = EXT:blog/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_blog_show.view.templateRootPath}
+        partialRootPaths.0 = EXT:blog/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_blog_show.view.partialRootPath}
+        layoutRootPaths.0 = EXT:blog/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_blog_show.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_blog_show.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+    }
+    settings {
+        listPid = 0
+        singlePid = 0
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+
+
+// ------------------------------------------------
+// render links to blog entries defined in
+// rte links (tab "Blog")
+// ------------------------------------------------
+config.recordLinks.linkToBlogEntries {
+    // Do not force link generation when the record is hidden
+    forceLink = 0
+    typolink {
+        parameter = {$plugin.tx_blog.singlePid}
+        additionalParams.data = field:uid
+        additionalParams.wrap = &tx_blog_show[post]=|&tx_blog_show[controller]=Post&tx_blog_show[action]=show
+    }
+}

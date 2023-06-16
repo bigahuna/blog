@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="EXT:blog/Resources/Private/Language/locallang_db.xlf" date="2022-07-27T08:59:36Z" product-name="blog">
+		<header/>
+		<body>
+			<trans-unit id="tx_blog_domain_model_post" resname="tx_blog_domain_model_post">
+				<source>Post</source>
+			</trans-unit>
+			<trans-unit id="tx_blog_domain_model_post.title" resname="tx_blog_domain_model_post.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_blog_domain_model_post.teaser" resname="tx_blog_domain_model_post.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_blog_domain_model_post.images" resname="tx_blog_domain_model_post.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_blog_domain_model_post.content" resname="tx_blog_domain_model_post.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_blog_domain_model_post.categories" resname="tx_blog_domain_model_post.categories">
+				<source>Categories</source>
+			</trans-unit>
+			<trans-unit id="tx_blog_domain_model_post.keywords" resname="tx_blog_domain_model_post.keywords">
+				<source>Keywords (SEO)</source>
+			</trans-unit>
+			<trans-unit id="tx_blog_domain_model_category" resname="tx_blog_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_blog_domain_model_category.name" resname="tx_blog_domain_model_category.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_blog_domain_model_category.value" resname="tx_blog_domain_model_category.value">
+				<source>Value</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
