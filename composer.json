@@ -38,7 +38,8 @@
             "dev-master": "11.0.x-dev"
         },
         "typo3/cms": {
-            "extension-key": "blog"
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "extension-key": "typo3-blog"
         }
     }
 }
