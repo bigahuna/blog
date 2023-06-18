@@ -15,21 +15,24 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="content">
 
-    <div class="rowxx">
+    <div class="row">
 
         <!-- content -->
-        <div class="contentxx col-lg-12xx">
-            <!-- Typo3Blog -->
+        <div class="content col-lg-12">
+            <!-- Blog -->
             <div id="typo3_blog" class="single-post">
                 <!-- Post single item-->
                 <div class="post-item">
                     <div class="post-item-wrap">
+
                         <div class="post-image">
                             <img alt="" src="{f:uri.image(image:post.images.0, width:1200, height:'400c')}">
                         </div>
 
                         <div class="frame-layout-0">
+
                             <div class="container col-lg-12">
+
                                 <div class="post-item-description margin-top">
                                     <h1>{post.title}</h1>
                                     <div class="post-meta">
@@ -42,7 +45,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                             <f:for each="{post.categories}" as="category" iteration="loginNewsIterator">
                                                 {category.name},
                                             </f:for>
-
                                         </span>
                                     </div>
                                     <div class="margin-bottom">
@@ -50,6 +52,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                     </div>
                                     <f:format.raw>{post.content}</f:format.raw>
                                 </div>
+
                                 <div class="post-navigation">
                                     <a href="{f:uri.action(action:'show', pageUid:'{settings.singlePid}', arguments:'{post:prevPost}')}"
                                         class="post-prev">
@@ -70,6 +73,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                         </div>
                                     </a>
                                 </div>
+
                             </div>
                         </div>
                     </div>

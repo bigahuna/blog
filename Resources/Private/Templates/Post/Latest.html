@@ -3,7 +3,6 @@
 
 <f:section name="content">
 
-
 	<f:comment>
 		<div class="heading-text heading-line text-center" data-animate="fadeIn">
 			<h2>Blog</h2>
@@ -11,7 +10,6 @@
 	</f:comment>
 
 	<div id="typo3_blog" class="grid-layout post-3-columns m-b-30 typo3_blog-list" data-item="post-item">
-
 		<f:for each="{posts}" as="post">
 
 			<f:variable name="urlSingleView">
@@ -29,10 +27,10 @@
 							<img alt="" src="{imageUrlSmall}" />
 						</a>
 						<!--
-							<span class="post-meta-category">
-								<a href="">Lifestyle</a>
-							</span>
-							-->
+						<span class="post-meta-category">
+							<a href="">Lifestyle</a>
+						</span>
+						-->
 					</div>
 					<div class="post-item-description">
 						<span class="post-meta-date">
@@ -40,13 +38,13 @@
 							<f:format.date format="d.m.Y">{post.crdate}</f:format.date>
 						</span>
 						<!--
-							<span class="post-meta-comments">
-								<a href="{urlSingleView}">
-									<i class="fa fa-comments-o"></i>33
-									Comments
-								</a>
-							</span>
-							-->
+						<span class="post-meta-comments">
+							<a href="{urlSingleView}">
+								<i class="fa fa-comments-o"></i>33
+								Comments
+							</a>
+						</span>
+						-->
 						<h2><a href="{urlSingleView}">{post.title}</a></h2>
 						<f:format.html parseFuncTSPath="">{post.teaser}</f:format.html>
 						<a href="{urlSingleView}" class="item-link">
@@ -58,7 +56,6 @@
 			</div>
 		</f:for>
 	</div>
-
 </f:section>
 
 </html>
