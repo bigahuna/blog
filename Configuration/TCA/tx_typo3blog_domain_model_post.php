@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:blog/Resources/Private/Language/locallang_db.xlf:tx_blog_domain_model_post',
+        'title' => 'LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_domain_model_post',
         'label' => 'title',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -21,7 +21,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'title,teaser,keywords,content,slug',
-        'iconfile' => 'EXT:blog/Resources/Public/Icons/tx_blog_domain_model_post.gif',
+        'iconfile' => 'EXT:typo3_blog/Resources/Public/Icons/tx_typo3blog_domain_model_post.gif',
     ],
     'types' => [
         '1' => ['showitem' => 'title, teaser, keywords, slug, images, content, categories, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, sys_language_uid, l10n_parent, l10n_diffsource, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
@@ -49,8 +49,8 @@ return [
                 'items' => [
                     ['', 0],
                 ],
-                'foreign_table' => 'tx_blog_domain_model_post',
-                'foreign_table_where' => 'AND {#tx_blog_domain_model_post}.{#pid}=###CURRENT_PID### AND {#tx_blog_domain_model_post}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_typo3blog_domain_model_post',
+                'foreign_table_where' => 'AND {#tx_typo3blog_domain_model_post}.{#pid}=###CURRENT_PID### AND {#tx_typo3blog_domain_model_post}.{#sys_language_uid} IN (-1,0)',
             ],
         ],
         'l10n_diffsource' => [
@@ -106,7 +106,7 @@ return [
         'title' => [
             'l10n_mode' => 'prefixLangTitle',
             'exclude' => true,
-            'label' => 'LLL:EXT:blog/Resources/Private/Language/locallang_db.xlf:tx_blog_domain_model_post.title',
+            'label' => 'LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_domain_model_post.title',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -118,7 +118,7 @@ return [
         'keywords' => [
             'l10n_mode' => 'prefixLangTitle',
             'exclude' => true,
-            'label' => 'LLL:EXT:blog/Resources/Private/Language/locallang_db.xlf:tx_blog_domain_model_post.keywords',
+            'label' => 'LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_domain_model_post.keywords',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -130,7 +130,7 @@ return [
         'teaser' => [
             'l10n_mode' => 'prefixLangTitle',
             'exclude' => true,
-            'label' => 'LLL:EXT:blog/Resources/Private/Language/locallang_db.xlf:tx_blog_domain_model_post.teaser',
+            'label' => 'LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_domain_model_post.teaser',
             'config' => [
                 'type' => 'text',
                 'enableRichtext' => true,
@@ -148,7 +148,7 @@ return [
         ],
         'images' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:blog/Resources/Private/Language/locallang_db.xlf:tx_blog_domain_model_post.images',
+            'label' => 'LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_domain_model_post.images',
             'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
                 'images',
                 [
@@ -157,7 +157,7 @@ return [
                     ],
                     'foreign_match_fields' => [
                         'fieldname' => 'images',
-                        'tablenames' => 'tx_blog_domain_model_post',
+                        'tablenames' => 'tx_typo3blog_domain_model_post',
                         'table_local' => 'sys_file',
                     ],
                     'maxitems' => 1,
@@ -202,7 +202,7 @@ return [
         'content' => [
             'l10n_mode' => 'prefixLangTitle',
             'exclude' => true,
-            'label' => 'LLL:EXT:blog/Resources/Private/Language/locallang_db.xlf:tx_blog_domain_model_post.content',
+            'label' => 'LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_domain_model_post.content',
             'config' => [
                 'type' => 'text',
                 'enableRichtext' => true,
@@ -220,12 +220,12 @@ return [
         ],
         'categories' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:blog/Resources/Private/Language/locallang_db.xlf:tx_blog_domain_model_post.categories',
+            'label' => 'LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_domain_model_post.categories',
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'tx_blog_domain_model_category',
-                'MM' => 'tx_blog_post_category_mm',
+                'foreign_table' => 'tx_typo3blog_domain_model_category',
+                'MM' => 'tx_typo3blog_post_category_mm',
                 'size' => 10,
                 'autoSizeMax' => 30,
                 'maxitems' => 9999,

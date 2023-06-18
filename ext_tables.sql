@@ -1,4 +1,4 @@
-CREATE TABLE tx_blog_domain_model_post (
+CREATE TABLE tx_typo3blog_domain_model_post (
 	title varchar(255) NOT NULL DEFAULT '',
 	teaser text,
 	images int(11) unsigned NOT NULL DEFAULT '0',
@@ -8,7 +8,7 @@ CREATE TABLE tx_blog_domain_model_post (
 	keywords varchar(255) NOT NULL DEFAULT ''
 );
 
-CREATE TABLE tx_blog_domain_model_category (
+CREATE TABLE tx_typo3blog_domain_model_category (
 	name varchar(255) NOT NULL DEFAULT '',
 	value varchar(255) NOT NULL DEFAULT ''
 );

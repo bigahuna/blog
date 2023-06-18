@@ -3,16 +3,16 @@
 declare(strict_types=1);
 
 return [
-    'blog-plugin-latest' => [
+    'typo3_blog-plugin-latest' => [
         'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        'source' => 'EXT:blog/Resources/Public/Icons/user_plugin_latest.svg',
+        'source' => 'EXT:typo3_blog/Resources/Public/Icons/user_plugin_latest.svg',
     ],
-    'blog-plugin-list' => [
+    'typo3_blog-plugin-list' => [
         'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        'source' => 'EXT:blog/Resources/Public/Icons/user_plugin_list.svg',
+        'source' => 'EXT:typo3_blog/Resources/Public/Icons/user_plugin_list.svg',
     ],
-    'blog-plugin-show' => [
+    'typo3_blog-plugin-show' => [
         'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        'source' => 'EXT:blog/Resources/Public/Icons/user_plugin_show.svg',
+        'source' => 'EXT:typo3_blog/Resources/Public/Icons/user_plugin_show.svg',
     ],
 ];

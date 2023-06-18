@@ -1,21 +1,21 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<table class="tx-blog">
+<table class="tx-typo3_blog">
 	<tr>
-		<td><f:translate key="tx_blog_domain_model_post.title" /></td>
+		<td><f:translate key="tx_typo3blog_domain_model_post.title" /></td>
 		<td>{post.title}</td>
 	</tr>
 	<tr>
-		<td><f:translate key="tx_blog_domain_model_post.teaser" /></td>
+		<td><f:translate key="tx_typo3blog_domain_model_post.teaser" /></td>
 		<td>{post.teaser}</td>
 	</tr>
 	<tr>
-		<td><f:translate key="tx_blog_domain_model_post.images" /></td>
+		<td><f:translate key="tx_typo3blog_domain_model_post.images" /></td>
 		<td>
 				<f:image src="{post.images.originalResource.publicUrl}" width="200"/>
             </td>
 	</tr>
 	<tr>
-		<td><f:translate key="tx_blog_domain_model_post.content" /></td>
+		<td><f:translate key="tx_typo3blog_domain_model_post.content" /></td>
 		<td>{post.content}</td>
 	</tr>
 </table>

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Rms\Blog\Domain\Model;
+namespace Rms\Typo3Blog\Domain\Model;
 
 use TYPO3\CMS\Extbase\Annotation\Validate;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 
 /**
- * This file is part of the "Blog" Extension for TYPO3 CMS.
+ * This file is part of the "Typo3Blog" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
@@ -16,7 +16,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
  * (c) 2022 Mike <mkettel@gmail.com>, visisblebits.de
  */
 /**
- * Categories for blog posts
+ * Categories for typo3_blog posts
  */
 class Category extends AbstractEntity
 {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:blog/Resources/Private/Language/locallang_db.xlf:tx_blog_domain_model_category',
+        'title' => 'LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_domain_model_category',
         'label' => 'name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
@@ -21,7 +21,7 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'name,value',
-        'iconfile' => 'EXT:blog/Resources/Public/Icons/tx_blog_domain_model_category.gif',
+        'iconfile' => 'EXT:typo3_blog/Resources/Public/Icons/tx_typo3blog_domain_model_category.gif',
     ],
     'types' => [
         '1' => ['showitem' => 'name, value, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, sys_language_uid, l10n_parent, l10n_diffsource, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
@@ -44,8 +44,8 @@ return [
                 'items' => [
                     ['', 0],
                 ],
-                'foreign_table' => 'tx_blog_domain_model_category',
-                'foreign_table_where' => 'AND {#tx_blog_domain_model_category}.{#pid}=###CURRENT_PID### AND {#tx_blog_domain_model_category}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_typo3blog_domain_model_category',
+                'foreign_table_where' => 'AND {#tx_typo3blog_domain_model_category}.{#pid}=###CURRENT_PID### AND {#tx_typo3blog_domain_model_category}.{#sys_language_uid} IN (-1,0)',
             ],
         ],
         'l10n_diffsource' => [
@@ -101,7 +101,7 @@ return [
         'name' => [
             'l10n_mode' => 'prefixLangTitle',
             'exclude' => true,
-            'label' => 'LLL:EXT:blog/Resources/Private/Language/locallang_db.xlf:tx_blog_domain_model_category.name',
+            'label' => 'LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_domain_model_category.name',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -112,7 +112,7 @@ return [
         'value' => [
             'l10n_mode' => 'prefixLangTitle',
             'exclude' => true,
-            'label' => 'LLL:EXT:blog/Resources/Private/Language/locallang_db.xlf:tx_blog_domain_model_category.value',
+            'label' => 'LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_domain_model_category.value',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
@@ -120,6 +120,6 @@ return [
                 'default' => '',
             ],
         ],
-    
+
     ],
 ];

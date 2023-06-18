@@ -1,7 +1,9 @@
 {
-    "name": "rms/blog",
+    "name": "rms/typo3-blog",
     "type": "typo3-cms-extension",
-    "description": "Blog Extension",
+    "description": "Typo3Blog Extension",
+    "minimum-stability": "dev",
+    "prefer-stable": false,
     "authors": [
         {
             "name": "Mike",
@@ -24,8 +26,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Rms\\Blog\\": "Classes"
+            "Rms\\Typo3Blog\\": "Classes"
         }
+    },
+    "replace": {
+        "typo3-ter/typo3-blog": "self.version"
     },
     "config": {
         "allow-plugins": {
@@ -34,11 +39,9 @@
         }
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "11.0.x-dev"
-        },
         "typo3/cms": {
-            "extension-key": "blog"
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "extension-key": "typo3_blog"
         }
     }
 }
