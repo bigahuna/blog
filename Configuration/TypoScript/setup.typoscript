@@ -89,12 +89,45 @@ plugin.tx_typo3_blog_show {
 // render links to typo3_blog entries defined in
 // rte links (tab "Typo3Blog")
 // ------------------------------------------------
-config.recordLinks.linkToBlogEntries {
+config.recordLinks.linkToTypo3BlogEntries {
     // Do not force link generation when the record is hidden
     forceLink = 0
     typolink {
         parameter = {$plugin.tx_typo3_blog.singlePid}
         additionalParams.data = field:uid
-        additionalParams.wrap = &tx_typo3_blog_show[post]=|&tx_typo3_blog_show[controller]=Post&tx_typo3_blog_show[action]=show
+        additionalParams.wrap = &tx_typo3blog_show[post]=|&tx_typo3blog_show[controller]=Post&tx_typo3blog_show[action]=show
+    }
+}
+
+
+// ------------------------------------------------
+// sitemap for blog posts
+// ------------------------------------------------
+plugin.tx_seo {
+    config {
+        xmlSitemap {
+            sitemaps {
+                posts {
+                    provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+                    config {
+                        table = tx_typo3blog_domain_model_post
+                        sortField = sorting
+                        lastModifiedField = tstamp
+                        recursive = 4
+                        pid = {$plugin.tx_typo3_blog.storagePid}
+                        url {
+                            pageId = {$plugin.tx_typo3_blog.singlePid}
+                            fieldToParameterMap {
+                                uid = tx_typo3blog_show[post]
+                            }
+                            additionalGetParameters {
+                                tx_typo3blog_show.controller = Post
+                                tx_typo3blog_show.action = show
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

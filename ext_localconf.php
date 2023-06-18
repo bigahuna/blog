@@ -52,7 +52,7 @@ defined('TYPO3') || die();
                         description = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3_blog_latest.description
                         tt_content_defValues {
                             CType = list
-                            list_type = blog_latest
+                            list_type = typo3_blog_latest
                         }
                     }
                     list {
@@ -61,7 +61,7 @@ defined('TYPO3') || die();
                         description = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3_blog_list.description
                         tt_content_defValues {
                             CType = list
-                            list_type = blog_list
+                            list_type = typo3_blog_list
                         }
                     }
                     show {
@@ -70,7 +70,7 @@ defined('TYPO3') || die();
                         description = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3_blog_show.description
                         tt_content_defValues {
                             CType = list
-                            list_type = blog_show
+                            list_type = typo3_blog_show
                         }
                     }
                 }

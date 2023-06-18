@@ -7,7 +7,7 @@
 #
 # mk, 2023-05-26
 # ------------------------------------------------
-TCEMAIN.linkHandler.linkToBlogEntries {
+TCEMAIN.linkHandler.linkToTypo3BlogEntries {
     handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
     label = Typo3Blog Posts
     configuration {
