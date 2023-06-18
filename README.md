@@ -4,6 +4,9 @@
 
 # Basic blog for TYPO3
 
+This is a basic blogging system extension for TYPO3
+
+## Setup
 
 ```typoscript
 # overwrite/set single, list and storage pids in your template constants.typoscript
@@ -11,7 +14,6 @@ plugin.tx_typo3blog.singlePid = 24
 plugin.tx_typo3blog.listPid = 23
 plugin.tx_typo3blog.storagePid = 22
 ```
-
 
 ```typoscript
 # overwrite/set fluid template files in you template constants.typoscript
