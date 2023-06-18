@@ -8,6 +8,8 @@ This is a basic blogging system extension for TYPO3
 
 ## Setup
 
+## constants
+
 ```typoscript
 # overwrite/set single, list and storage pids in your template constants.typoscript
 plugin.tx_typo3blog.singlePid = 24
@@ -21,4 +23,19 @@ plugin.tx_typo3blog.storagePid = 22
 plugin.tx_typo3blog_latest.view.templateRootPath = EXT:maintemplate/Resources/Private/Templates/Typo3Blog/
 plugin.tx_typo3blog_list.view.templateRootPath = EXT:maintemplate/Resources/Private/Templates/Typo3Blog/
 plugin.tx_typo3blog_show.view.templateRootPath = EXT:maintemplate/Resources/Private/Templates/Typo3Blog/
+```
+
+## setup
+
+```typoscript
+# to assign the constant values from above, add this to your templates typoscript setup
+plugin.tx_typo3blog.singlePid = {$plugin.tx_typo3blog.singlePid}
+plugin.tx_typo3blog.listPid = {$plugin.tx_typo3blog.listPid}
+plugin.tx_typo3blog_show.settings.listPid = {$plugin.tx_typo3blog.listPid}
+plugin.tx_typo3blog_show.settings.singlePid = {$plugin.tx_typo3blog.singlePid}
+plugin.tx_typo3blog_latest.persistence.storagePid = {$plugin.tx_typo3blog.storagePid}
+plugin.tx_typo3blog_latest.settings.singlePid = {$plugin.tx_typo3blog.singlePid}
+plugin.tx_typo3blog_list.settings.singlePid = {$plugin.tx_typo3blog.singlePid}
+plugin.tx_typo3blog_list.persistence.storagePid = {$plugin.tx_typo3blog.storagePid}
+plugin.tx_typo3blog_show.persistence.storagePid = {$plugin.tx_typo3blog.storagePid}
 ```
