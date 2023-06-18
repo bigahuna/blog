@@ -48,8 +48,8 @@ defined('TYPO3') || die();
                 elements {
                     latest {
                         iconIdentifier = typo3_blog-plugin-latest
-                        title = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3_blog_latest.name
-                        description = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3_blog_latest.description
+                        title = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_latest.name
+                        description = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_latest.description
                         tt_content_defValues {
                             CType = list
                             list_type = typo3_blog_latest
@@ -57,8 +57,8 @@ defined('TYPO3') || die();
                     }
                     list {
                         iconIdentifier = typo3_blog-plugin-list
-                        title = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3_blog_list.name
-                        description = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3_blog_list.description
+                        title = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_list.name
+                        description = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_list.description
                         tt_content_defValues {
                             CType = list
                             list_type = typo3_blog_list
@@ -66,8 +66,8 @@ defined('TYPO3') || die();
                     }
                     show {
                         iconIdentifier = typo3_blog-plugin-show
-                        title = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3_blog_show.name
-                        description = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3_blog_show.description
+                        title = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_show.name
+                        description = LLL:EXT:typo3_blog/Resources/Private/Language/locallang_db.xlf:tx_typo3blog_show.description
                         tt_content_defValues {
                             CType = list
                             list_type = typo3_blog_show

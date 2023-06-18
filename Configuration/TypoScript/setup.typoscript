@@ -1,20 +1,20 @@
-plugin.tx_typo3_blog.singlePid = 0
-plugin.tx_typo3_blog.listPid = 0
-plugin.tx_typo3_blog_latest.persistence.storagePid = 0
-plugin.tx_typo3_blog_list.persistence.storagePid = 0
-plugin.tx_typo3_blog_show.persistence.storagePid = 0
+plugin.tx_typo3blog.singlePid = 0
+plugin.tx_typo3blog.listPid = 0
+plugin.tx_typo3blog_latest.persistence.storagePid = 0
+plugin.tx_typo3blog_list.persistence.storagePid = 0
+plugin.tx_typo3blog_show.persistence.storagePid = 0
 
-plugin.tx_typo3_blog_latest {
+plugin.tx_typo3blog_latest {
     view {
         templateRootPaths.0 = EXT:typo3_blog/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_typo3_blog_latest.view.templateRootPath}
+        templateRootPaths.1 = {$plugin.tx_typo3blog_latest.view.templateRootPath}
         partialRootPaths.0 = EXT:typo3_blog/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_typo3_blog_latest.view.partialRootPath}
+        partialRootPaths.1 = {$plugin.tx_typo3blog_latest.view.partialRootPath}
         layoutRootPaths.0 = EXT:typo3_blog/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_typo3_blog_latest.view.layoutRootPath}
+        layoutRootPaths.1 = {$plugin.tx_typo3blog_latest.view.layoutRootPath}
     }
     persistence {
-        storagePid = {$plugin.tx_typo3_blog_latest.persistence.storagePid}
+        storagePid = {$plugin.tx_typo3blog_latest.persistence.storagePid}
         #recursive = 1
     }
     features {
@@ -30,17 +30,17 @@ plugin.tx_typo3_blog_latest {
         singlePid = 0
     }
 }
-plugin.tx_typo3_blog_list {
+plugin.tx_typo3blog_list {
     view {
         templateRootPaths.0 = EXT:typo3_blog/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_typo3_blog_list.view.templateRootPath}
+        templateRootPaths.1 = {$plugin.tx_typo3blog_list.view.templateRootPath}
         partialRootPaths.0 = EXT:typo3_blog/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_typo3_blog_list.view.partialRootPath}
+        partialRootPaths.1 = {$plugin.tx_typo3blog_list.view.partialRootPath}
         layoutRootPaths.0 = EXT:typo3_blog/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_typo3_blog_list.view.layoutRootPath}
+        layoutRootPaths.1 = {$plugin.tx_typo3blog_list.view.layoutRootPath}
     }
     persistence {
-        storagePid = {$plugin.tx_typo3_blog_list.persistence.storagePid}
+        storagePid = {$plugin.tx_typo3blog_list.persistence.storagePid}
         #recursive = 1
     }
     features {
@@ -56,17 +56,17 @@ plugin.tx_typo3_blog_list {
         singlePid = 0
     }
 }
-plugin.tx_typo3_blog_show {
+plugin.tx_typo3blog_show {
     view {
         templateRootPaths.0 = EXT:typo3_blog/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_typo3_blog_show.view.templateRootPath}
+        templateRootPaths.1 = {$plugin.tx_typo3blog_show.view.templateRootPath}
         partialRootPaths.0 = EXT:typo3_blog/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_typo3_blog_show.view.partialRootPath}
+        partialRootPaths.1 = {$plugin.tx_typo3blog_show.view.partialRootPath}
         layoutRootPaths.0 = EXT:typo3_blog/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_typo3_blog_show.view.layoutRootPath}
+        layoutRootPaths.1 = {$plugin.tx_typo3blog_show.view.layoutRootPath}
     }
     persistence {
-        storagePid = {$plugin.tx_typo3_blog_show.persistence.storagePid}
+        storagePid = {$plugin.tx_typo3blog_show.persistence.storagePid}
         #recursive = 1
     }
     features {
@@ -93,7 +93,7 @@ config.recordLinks.linkToTypo3BlogEntries {
     // Do not force link generation when the record is hidden
     forceLink = 0
     typolink {
-        parameter = {$plugin.tx_typo3_blog.singlePid}
+        parameter = {$plugin.tx_typo3blog.singlePid}
         additionalParams.data = field:uid
         additionalParams.wrap = &tx_typo3blog_show[post]=|&tx_typo3blog_show[controller]=Post&tx_typo3blog_show[action]=show
     }
@@ -114,9 +114,9 @@ plugin.tx_seo {
                         sortField = sorting
                         lastModifiedField = tstamp
                         recursive = 4
-                        pid = {$plugin.tx_typo3_blog.storagePid}
+                        pid = {$plugin.tx_typo3blog.storagePid}
                         url {
-                            pageId = {$plugin.tx_typo3_blog.singlePid}
+                            pageId = {$plugin.tx_typo3blog.singlePid}
                             fieldToParameterMap {
                                 uid = tx_typo3blog_show[post]
                             }

@@ -119,7 +119,7 @@ class PostController extends ActionController
         $posts = $this->postRepository->getLatestPosts(30);
 
         $this->view->assign('posts', $posts);
-        $this->view->assign('settings', $typoscript['plugin.']['tx_typo3_blog.']);
+        $this->view->assign('settings', $typoscript['plugin.']['tx_typo3blog_latest.']['settings.']);
 
         return $this->htmlResponse();
     }
