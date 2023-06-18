@@ -2,6 +2,8 @@
     "name": "rms/typo3-blog",
     "type": "typo3-cms-extension",
     "description": "Typo3Blog Extension",
+    "minimum-stability": "dev",
+    "prefer-stable": false,
     "authors": [
         {
             "name": "Mike",
