@@ -27,6 +27,9 @@
             "Rms\\Typo3Blog\\": "Classes"
         }
     },
+    "replace": {
+        "typo3-ter/typo3-blog": "self.version"
+    },
     "config": {
         "allow-plugins": {
             "typo3/cms-composer-installers": true,
@@ -34,9 +37,6 @@
         }
     },
     "extra": {
-        "branch-alias": {
-            "dev-master": "11.0.x-dev"
-        },
         "typo3/cms": {
             "cms-package-dir": "{$vendor-dir}/typo3/cms",
             "extension-key": "typo3-blog"
