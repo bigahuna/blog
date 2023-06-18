@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Rms\Blog\Tests\Unit\Controller;
+namespace Rms\Typo3Blog\Tests\Unit\Controller;
 
 use PHPUnit\Framework\MockObject\MockObject;
-use Rms\Blog\Controller\PostController;
-use Rms\Blog\Domain\Model\Post;
-use Rms\Blog\Domain\Repository\PostRepository;
+use Rms\Typo3Blog\Controller\PostController;
+use Rms\Typo3Blog\Domain\Model\Post;
+use Rms\Typo3Blog\Domain\Repository\PostRepository;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;

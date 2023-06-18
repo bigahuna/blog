@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rms\Blog\Tests\Functional;
+namespace Rms\Typo3Blog\Tests\Functional;
 
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
@@ -17,7 +17,7 @@ class BasicTest extends FunctionalTestCase
      * @var array
      */
     protected $testExtensionsToLoad = [
-        'typo3conf/ext/blog',
+        'typo3conf/ext/typo3_blog',
     ];
 
     /**

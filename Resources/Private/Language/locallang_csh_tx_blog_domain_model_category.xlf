@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="de" datatype="plaintext" original="EXT:blog/Resources/Private/Language/locallang_csh_tx_blog_domain_model_category.xlf" date="2022-07-27T08:59:36Z" product-name="blog">
+	<file source-language="de" datatype="plaintext" original="EXT:typo3_blog/Resources/Private/Language/locallang_csh_tx_typo3blog_domain_model_category.xlf" date="2022-07-27T08:59:36Z" product-name="typo3_blog">
 		<header/>
 		<body>
 			<trans-unit id="name.description" resname="name.description">

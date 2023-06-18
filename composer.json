@@ -1,7 +1,7 @@
 {
-    "name": "rms/blog",
+    "name": "rms/typo3-blog",
     "type": "typo3-cms-extension",
-    "description": "Blog Extension",
+    "description": "Typo3Blog Extension",
     "authors": [
         {
             "name": "Mike",
@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rms\\Blog\\": "Classes"
+            "Rms\\Typo3Blog\\": "Classes"
         }
     },
     "config": {

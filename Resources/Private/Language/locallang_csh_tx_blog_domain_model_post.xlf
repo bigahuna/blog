@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="de" datatype="plaintext" original="EXT:blog/Resources/Private/Language/locallang_csh_tx_blog_domain_model_post.xlf" date="2022-07-27T08:59:36Z" product-name="blog">
+	<file source-language="de" datatype="plaintext" original="EXT:typo3_blog/Resources/Private/Language/locallang_csh_tx_typo3blog_domain_model_post.xlf" date="2022-07-27T08:59:36Z" product-name="typo3_blog">
 		<header/>
 		<body>
 			<trans-unit id="title.description" resname="title.description">
 				<source>title</source>
 			</trans-unit>
 			<trans-unit id="teaser.description" resname="teaser.description">
-				<source>blog teaser</source>
+				<source>typo3_blog teaser</source>
 			</trans-unit>
 			<trans-unit id="images.description" resname="images.description">
-				<source>one or more blog images</source>
+				<source>one or more typo3_blog images</source>
 			</trans-unit>
 			<trans-unit id="content.description" resname="content.description">
-				<source>blog content</source>
+				<source>typo3_blog content</source>
 			</trans-unit>
 			<trans-unit id="categories.description" resname="categories.description">
 				<source>Categories for this post</source>

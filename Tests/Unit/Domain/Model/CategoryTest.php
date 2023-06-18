@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Rms\Blog\Tests\Unit\Domain\Model;
+namespace Rms\Typo3Blog\Tests\Unit\Domain\Model;
 
 use PHPUnit\Framework\MockObject\MockObject;
-use Rms\Blog\Domain\Model\Category;
+use Rms\Typo3Blog\Domain\Model\Category;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 

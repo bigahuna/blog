@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rms\Blog\Domain\Model;
+namespace Rms\Typo3Blog\Domain\Model;
 
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\Validate;
@@ -11,7 +11,7 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
- * This file is part of the "Blog" Extension for TYPO3 CMS.
+ * This file is part of the "Typo3Blog" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
@@ -19,7 +19,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
  * (c) 2022 Mike <mkettel@gmail.com>, visisblebits.de
  */
 /**
- * Single blog post
+ * Single typo3_blog post
  */
 class Post extends AbstractEntity
 {
@@ -32,7 +32,7 @@ class Post extends AbstractEntity
     protected $title = '';
 
     /**
-     * blog teaser
+     * typo3_blog teaser
      *
      * @var string
      * @Validate("NotEmpty")
@@ -40,7 +40,7 @@ class Post extends AbstractEntity
     protected $teaser = '';
 
     /**
-     * one or more blog images
+     * one or more typo3_blog images
      *
      * @var ObjectStorage<FileReference>
      * @Validate("NotEmpty")
@@ -49,7 +49,7 @@ class Post extends AbstractEntity
     protected $images = null;
 
     /**
-     * blog content
+     * typo3_blog content
      *
      * @var string
      * @Validate("NotEmpty")

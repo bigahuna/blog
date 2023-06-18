@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Rms\Blog\Controller;
+namespace Rms\Typo3Blog\Controller;
 
 use Psr\Http\Message\ResponseInterface;
-use Rms\Blog\Domain\Model\Post;
-use Rms\Blog\Domain\Repository\PostRepository;
-use Rms\Blog\MyPageTitleProvider;
+use Rms\Typo3Blog\Domain\Model\Post;
+use Rms\Typo3Blog\Domain\Repository\PostRepository;
+use Rms\Typo3Blog\MyPageTitleProvider;
 use TYPO3\CMS\Core\MetaTag\MetaTagManagerRegistry;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
@@ -15,7 +15,7 @@ use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
- * This file is part of the "Blog" Extension for TYPO3 CMS.
+ * This file is part of the "Typo3Blog" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.txt file that was distributed with this source code.
@@ -119,7 +119,7 @@ class PostController extends ActionController
         $posts = $this->postRepository->getLatestPosts(30);
 
         $this->view->assign('posts', $posts);
-        $this->view->assign('settings', $typoscript['plugin.']['tx_blog.']);
+        $this->view->assign('settings', $typoscript['plugin.']['tx_typo3_blog.']);
 
         return $this->htmlResponse();
     }
