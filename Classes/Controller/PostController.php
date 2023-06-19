@@ -44,6 +44,29 @@ class PostController extends ActionController
     }
 
     /**
+     * action latest
+     *
+     *
+     * @return ResponseInterface
+     */
+    public function latestAction(): ResponseInterface
+    {
+        /** @var ConfigurationManager $configurationManager */
+        $configurationManager = GeneralUtility::makeInstance(ConfigurationManager::class);
+        $typoscript = $configurationManager->getConfiguration(
+            ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT,
+            'sitepackage'
+        );
+
+        $posts = $this->postRepository->getLatestPosts(30);
+
+        $this->view->assign('posts', $posts);
+        $this->view->assign('settings', $typoscript['plugin.']['tx_typo3blog_latest.']['settings.']);
+
+        return $this->htmlResponse();
+    }
+
+    /**
      * action list
      *
      * @return ResponseInterface
@@ -97,29 +120,6 @@ class PostController extends ActionController
         $this->view->assign('nextPost', $next);
 
         $this->view->assign('post', $post);
-
-        return $this->htmlResponse();
-    }
-
-    /**
-     * action latest
-     *
-     *
-     * @return ResponseInterface
-     */
-    public function latestAction(): ResponseInterface
-    {
-        /** @var ConfigurationManager $configurationManager */
-        $configurationManager = GeneralUtility::makeInstance(ConfigurationManager::class);
-        $typoscript = $configurationManager->getConfiguration(
-            ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT,
-            'sitepackage'
-        );
-
-        $posts = $this->postRepository->getLatestPosts(30);
-
-        $this->view->assign('posts', $posts);
-        $this->view->assign('settings', $typoscript['plugin.']['tx_typo3blog_latest.']['settings.']);
 
         return $this->htmlResponse();
     }

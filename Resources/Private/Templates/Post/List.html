@@ -1,44 +1,61 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 
-This template is responsible for creating a table of domain objects.
-
-If you modify this template, do not forget to change the overwrite settings
-in /Configuration/ExtensionBuilder/settings.yaml:
-  Resources:
-    Private:
-      Templates:
-        Post:
-          List.html: keep
-
-Otherwise your changes will be overwritten the next time you save the extension in the extension builder
-
 <f:section name="content">
-    <h1>Listing for Post</h1>
 
-    <f:flashMessages />
+    <f:comment>
+        <div class="heading-text heading-line text-center" data-animate="fadeIn">
+            <h2>Alle Blog Beiträge</h2>
+        </div>
+    </f:comment>
 
-    <table class="tx_typo3blog_list">
-        <tr>
-            <th><f:translate key="tx_typo3blog_domain_model_post.title" /></th>
-            <th><f:translate key="tx_typo3blog_domain_model_post.teaser" /></th>
-            <th><f:translate key="tx_typo3blog_domain_model_post.images" /></th>
-            <th><f:translate key="tx_typo3blog_domain_model_post.content" /></th>
-            <th></th>
-            <th></th>
-        </tr>
+    <div id="typo3_blog" class="grid-layout post-3-columns m-b-30 typo3_blog-list" data-item="post-item">
         <f:for each="{posts}" as="post">
-            <tr>
-                <td><f:link.action action="show" arguments="{post : post}">{post.title}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{post : post}">{post.teaser}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{post : post}">{post.images.originalResource.name}</f:link.action></td>
-                <td><f:link.action action="show" arguments="{post : post}">{post.content}</f:link.action></td>
-                <td><f:link.action action="edit" arguments="{post : post}">Edit</f:link.action></td>
-                <td><f:link.action action="delete" arguments="{post : post}">Delete</f:link.action></td>
-            </tr>
-        </f:for>
-    </table>
 
-    <f:link.action action="new">New Post</f:link.action>
+            <f:variable name="urlSingleView">
+                {f:uri.action(action:'show', pageUid:'{settings.singlePid}', arguments:"{post:post}")}
+            </f:variable>
+
+            <f:variable name="imageUrlSmall"
+                value="{f:uri.image(image: '{post.images.0}', width:'525', height:'350')}" />
+            <f:variable name="imageUrl" value="{f:uri.image(image: '{post.images.0}', maxWidth:'1200')}" />
+
+            <div class="post-item border">
+                <div class="post-item-wrap" data-animate="fadeIn">
+                    <div class="post-image">
+                        <a href="{urlSingleView}">
+                            <img alt="" src="{imageUrlSmall}" />
+                        </a>
+                        <!--
+						<span class="post-meta-category">
+							<a href="">Lifestyle</a>
+						</span>
+						-->
+                    </div>
+                    <div class="post-item-description">
+                        <span class="post-meta-date">
+                            <i class="fa fa-calendar-o"></i>
+                            <f:format.date format="d.m.Y">{post.crdate}</f:format.date>
+                        </span>
+                        <!--
+						<span class="post-meta-comments">
+							<a href="{urlSingleView}">
+								<i class="fa fa-comments-o"></i>33
+								Comments
+							</a>
+						</span>
+						-->
+                        <h2><a href="{urlSingleView}">{post.title}</a></h2>
+                        <f:format.html parseFuncTSPath="">{post.teaser}</f:format.html>
+                        <a href="{urlSingleView}" class="item-link">
+                            weiterlesen
+                            <i class="icon-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
 </f:section>
+
 </html>
