@@ -8,6 +8,36 @@ This is a basic blogging system extension for TYPO3
 
 ## Setup
 
+### Composer install 
+
+In your composer.yaml extend the repositories section with the "type": "vcs" part:
+
+```yaml
+"repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/rmsstuttgart/typo3_blog.git"
+    },
+    ...
+```
+
+Add the extension the the require section and run `composer require rms/typo3-blog`
+
+```yaml
+"require": {
+   ...
+   "php": ">=8.1",
+   "typo3/cms-extbase": "^11.5.23",
+   "typo3/cms-core": "^11.5.23",
+   ...
+   "rms/typo3-blog": "^1.0"
+},
+```
+
 ### constants
 
 ```typoscript
