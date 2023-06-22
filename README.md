@@ -10,9 +10,9 @@ This is a basic blogging system extension for TYPO3
 
 ### Composer install 
 
-In your composer.yaml extend the repositories section with the "type": "vcs" part:
+In your composer.json extend the repositories section with the "type": "vcs" part:
 
-```yaml
+```json
 "repositories": [
     {
       "type": "composer",
@@ -22,27 +22,22 @@ In your composer.yaml extend the repositories section with the "type": "vcs" par
       "type": "vcs",
       "url": "https://github.com/rmsstuttgart/typo3_blog.git"
     },
-    ...
 ```
 
 Add the extension the the require section and run `composer require rms/typo3-blog`
 
-```yaml
+```json
 "require": {
-   ...
    "php": ">=8.1",
-   "typo3/cms-extbase": "^11.5.23",
    "typo3/cms-core": "^11.5.23",
-   ...
    "rms/typo3-blog": "^1.0"
 },
 ```
 
 Now add the classpath to the autoloading section
-```yaml
+```json
 "autoload": {
     "psr-4": {
-      ...
       "Rms\\Typo3Blog\\": "public/typo3conf/ext/typo3_blog/Classes/"      
     }
   },
