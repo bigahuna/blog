@@ -43,7 +43,7 @@ Now add the classpath to the autoloading section
 "autoload": {
     "psr-4": {
       ...
-      "Rms\\Typo3Blog\\": "public/typo3conf/ext/evim_blog/Classes/"      
+      "Rms\\Typo3Blog\\": "public/typo3conf/ext/typo3_blog/Classes/"      
     }
   },
 ```
