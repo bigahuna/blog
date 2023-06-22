@@ -38,6 +38,16 @@ Add the extension the the require section and run `composer require rms/typo3-bl
 },
 ```
 
+Now add the classpath to the autoloading section
+```yaml
+"autoload": {
+    "psr-4": {
+      ...
+      "Rms\\Typo3Blog\\": "public/typo3conf/ext/evim_blog/Classes/"      
+    }
+  },
+```
+
 ### constants
 
 ```typoscript
