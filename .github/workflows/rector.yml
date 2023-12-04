@@ -1,4 +1,4 @@
-name: PHP_CodeSniffer
+name: PHP_Rector
 
 on: [push, pull_request]
 
