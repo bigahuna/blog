@@ -9,9 +9,6 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 class MyPageTitleProvider extends AbstractPageTitleProvider
 {
-    /**
-     * @param string $title
-     */
     public function setTitle(string $title): void
     {
         $this->title = $title;

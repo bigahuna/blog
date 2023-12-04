@@ -33,11 +33,8 @@ class PostController extends ActionController
      *
      * @var PostRepository
      */
-    protected $postRepository = null;
+    protected $postRepository;
 
-    /**
-     * @param PostRepository $postRepository
-     */
     public function injectPostRepository(PostRepository $postRepository): void
     {
         $this->postRepository = $postRepository;
@@ -45,9 +42,6 @@ class PostController extends ActionController
 
     /**
      * action latest
-     *
-     *
-     * @return ResponseInterface
      */
     public function latestAction(): ResponseInterface
     {
@@ -68,8 +62,6 @@ class PostController extends ActionController
 
     /**
      * action list
-     *
-     * @return ResponseInterface
      */
     public function listAction(): ResponseInterface
     {
@@ -81,18 +73,15 @@ class PostController extends ActionController
 
     /**
      * action show
-     *
-     * @param Post $post
-     * @return ResponseInterface
      */
     public function showAction(Post $post): ResponseInterface
     {
-        /** @var ConfigurationManagerInterface $configurationManager */
-        $configurationManager = GeneralUtility::makeInstance(ConfigurationManager::class);
-        $typoscript = $configurationManager->getConfiguration(
-            ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT,
-            'sitepackage'
-        );
+        // /** @var ConfigurationManagerInterface $configurationManager */
+        //$configurationManager = GeneralUtility::makeInstance(ConfigurationManager::class);
+        //$typoscript = $configurationManager->getConfiguration(
+        //    ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT,
+        //    'sitepackage'
+        //);
 
         /** @var MyPageTitleProvider $titleProvider */
         $titleProvider = GeneralUtility::makeInstance(MyPageTitleProvider::class);

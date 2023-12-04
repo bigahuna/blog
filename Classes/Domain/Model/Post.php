@@ -46,7 +46,7 @@ class Post extends AbstractEntity
      * @Validate("NotEmpty")
      * @Cascade("remove")
      */
-    protected $images = null;
+    protected $images;
 
     /**
      * typo3_blog content
@@ -61,7 +61,7 @@ class Post extends AbstractEntity
      *
      * @var ObjectStorage<Category>
      */
-    protected $categories = null;
+    protected $categories;
 
     /**
      * slug
@@ -76,7 +76,7 @@ class Post extends AbstractEntity
     /**
      * @var \DateTime
      */
-    protected $crdate = null;
+    protected $crdate;
 
     /**
      * __construct
@@ -104,42 +104,32 @@ class Post extends AbstractEntity
 
     /**
      * Returns the title
-     *
-     * @return string
      */
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
 
     /**
      * Sets the title
-     *
-     * @param string $title
-     * @return void
      */
-    public function setTitle(string $title)
+    public function setTitle(string $title): void
     {
         $this->title = $title;
     }
 
     /**
      * Returns the teaser
-     *
-     * @return string
      */
-    public function getTeaser()
+    public function getTeaser(): string
     {
         return $this->teaser;
     }
 
     /**
      * Sets the teaser
-     *
-     * @param string $teaser
-     * @return void
      */
-    public function setTeaser(string $teaser)
+    public function setTeaser(string $teaser): void
     {
         $this->teaser = $teaser;
     }
@@ -158,7 +148,6 @@ class Post extends AbstractEntity
      * Sets the images
      *
      * @param ObjectStorage<FileReference> $images
-     * @return void
      */
     public function setImages(ObjectStorage $images): void
     {
@@ -167,32 +156,24 @@ class Post extends AbstractEntity
 
     /**
      * Returns the content
-     *
-     * @return string
      */
-    public function getContent()
+    public function getContent(): string
     {
         return $this->content;
     }
 
     /**
      * Sets the content
-     *
-     * @param string $content
-     * @return void
      */
-    public function setContent(string $content)
+    public function setContent(string $content): void
     {
         $this->content = $content;
     }
 
     /**
      * Adds a Category
-     *
-     * @param Category $category
-     * @return void
      */
-    public function addCategory(Category $category)
+    public function addCategory(Category $category): void
     {
         $this->categories->attach($category);
     }
@@ -201,9 +182,8 @@ class Post extends AbstractEntity
      * Removes a Category
      *
      * @param Category $categoryToRemove The Category to be removed
-     * @return void
      */
-    public function removeCategory(Category $categoryToRemove)
+    public function removeCategory(Category $categoryToRemove): void
     {
         $this->categories->detach($categoryToRemove);
     }
@@ -231,21 +211,16 @@ class Post extends AbstractEntity
 
     /**
      * Returns the slug
-     *
-     * @return string $slug
      */
-    public function getSlug()
+    public function getSlug(): string
     {
         return $this->slug;
     }
 
     /**
      * Sets the slug
-     *
-     * @param string $slug
-     * @return void
      */
-    public function setSlug(string $slug)
+    public function setSlug(string $slug): void
     {
         $this->slug = $slug;
     }
