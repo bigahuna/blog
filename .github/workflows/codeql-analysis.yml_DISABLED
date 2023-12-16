@@ -9,6 +9,10 @@ on:
   schedule:
     - cron: '30 6 * * 1'
 
+defaults:
+  run:
+    working-directory: typo3
+
 jobs:
   analyze:
     name: Analyze
