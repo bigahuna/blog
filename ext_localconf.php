@@ -2,47 +2,51 @@
 
 declare(strict_types=1);
 
+use Rms\Typo3Blog\Controller\PostController;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
 defined('TYPO3') || die();
 
 (static function () {
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    ExtensionUtility::configurePlugin(
         'Typo3Blog',
         'Latest',
         [
-            \Rms\Typo3Blog\Controller\PostController::class => 'latest',
+            PostController::class => 'latest',
         ],
         // non-cacheable actions
         [
-            \Rms\Typo3Blog\Controller\PostController::class => '',
+            PostController::class => '',
         ]
     );
 
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    ExtensionUtility::configurePlugin(
         'Typo3Blog',
         'List',
         [
-            \Rms\Typo3Blog\Controller\PostController::class => 'list',
+            PostController::class => 'list',
         ],
         // non-cacheable actions
         [
-            \Rms\Typo3Blog\Controller\PostController::class => 'list',
+            PostController::class => 'list',
         ]
     );
 
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    ExtensionUtility::configurePlugin(
         'Typo3Blog',
         'Show',
         [
-            \Rms\Typo3Blog\Controller\PostController::class => 'show',
+            PostController::class => 'show',
         ],
         // non-cacheable actions
         [
-            \Rms\Typo3Blog\Controller\PostController::class => '',
+            PostController::class => '',
         ]
     );
 
     // wizards
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+    ExtensionManagementUtility::addPageTSConfig(
         'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
@@ -86,6 +90,6 @@ defined('TYPO3') || die();
 // so that it can be used inside filemetadata too
 // mk, 2023-05-26
 // ------------------------------------------------
-TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+ExtensionManagementUtility::addPageTSConfig(
     "@import 'EXT:typo3_blog/Configuration/TSconfig/addBlogPostLinksRte.tsconfig'"
 );

@@ -9,7 +9,7 @@ plugin.tx_typo3blog_latest {
     }
     persistence {
         # cat=plugin.tx_typo3blog_latest//a; type=string; label=Default storage PID
-        storagePid =
+        storagePid = 
     }
 }
 plugin.tx_typo3blog_list {
@@ -23,7 +23,7 @@ plugin.tx_typo3blog_list {
     }
     persistence {
         # cat=plugin.tx_typo3blog_list//a; type=string; label=Default storage PID
-        storagePid =
+        storagePid = 
     }
 }
 plugin.tx_typo3blog_show {
@@ -37,6 +37,6 @@ plugin.tx_typo3blog_show {
     }
     persistence {
         # cat=plugin.tx_typo3blog_show//a; type=string; label=Default storage PID
-        storagePid =
+        storagePid = 
     }
 }
