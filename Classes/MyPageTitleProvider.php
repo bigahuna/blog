@@ -16,12 +16,14 @@ class MyPageTitleProvider extends AbstractPageTitleProvider
 
     public function setBlogTitle(string $title): void
     {
+        /*
         $this->title = $title . ' | ';
         $rootline = $GLOBALS['TSFE']->rootLine;
         $last_key = array_key_first($rootline);
         $rootline[$last_key]['title'] = $title;
         $GLOBALS['TSFE']->rootLine = $rootline;
         //DebuggerUtility::var_dump($GLOBALS['TSFE']->rootLine);
+        */
 
         /*
         $separator = ' | ';
