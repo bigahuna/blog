@@ -58,6 +58,8 @@ return static function (RectorConfig $rectorConfig): void {
         __DIR__ . '/public/*',
         __DIR__ . '/.github/*',
         __DIR__ . '/.Build/*',
+        __DIR__ . '**/typo3/index.php',
+        __DIR__ . '**/public/index.php',
         '**/typo3/index.php',
         '**/public/index.php',
         NameImportingPostRector::class => [
