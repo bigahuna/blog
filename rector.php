@@ -55,7 +55,7 @@ return static function (RectorConfig $rectorConfig): void {
         __DIR__ . '/**/Resources/**/build/*',
         __DIR__ . '/vendor/*',
         __DIR__ . '/Build/*',
-        //__DIR__ . '/public/*',
+        __DIR__ . '/public/*',
         __DIR__ . '/.github/*',
         __DIR__ . '/.Build/*',
         '**/typo3/index.php',
