@@ -4,6 +4,7 @@
     "description": "Typo3Blog Extension",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "version": "1.2.0",
     "authors": [
         {
             "name": "Mike",
