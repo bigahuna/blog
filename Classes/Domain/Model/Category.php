@@ -24,16 +24,16 @@ class Category extends AbstractEntity
      * name
      *
      * @var string
-     * @Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $name = '';
 
     /**
      * value
      *
      * @var string
-     * @Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $value = '';
 
     /**
