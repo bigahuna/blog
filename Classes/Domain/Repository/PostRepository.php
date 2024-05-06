@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Rms\Typo3Blog\Domain\Repository;
 
+use TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
@@ -25,7 +26,7 @@ class PostRepository extends Repository
     protected $defaultOrderings = ['sorting' => QueryInterface::ORDER_ASCENDING];
 
     /**
-     * @return \TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface|null
+     * @return DomainObjectInterface|null
      */
     public function getPrevPost(int $post)
     {
@@ -57,7 +58,7 @@ class PostRepository extends Repository
     }
 
     /**
-     * @return \TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface|null
+     * @return DomainObjectInterface|null
      */
     public function getNextPost(int $post)
     {
