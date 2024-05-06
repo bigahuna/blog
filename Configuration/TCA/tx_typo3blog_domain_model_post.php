@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 use TYPO3\CMS\Core\Resource\File;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 return [
     'ctrl' => [

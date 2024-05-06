@@ -35,7 +35,7 @@ class PostController extends ActionController
      */
     protected $postRepository;
 
-    public function __construct(\Rms\Typo3Blog\Domain\Repository\PostRepository $postRepository)
+    public function __construct(PostRepository $postRepository)
     {
         $this->postRepository = $postRepository;
     }

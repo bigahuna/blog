@@ -25,7 +25,7 @@ class PostRepository extends Repository
     protected $defaultOrderings = ['sorting' => QueryInterface::ORDER_ASCENDING];
 
     /**
-     * @return QueryResultInterface|object[] The query result object or an array if $returnRawQueryResult is TRUE
+     * @return \TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface|null
      */
     public function getPrevPost(int $post)
     {
@@ -40,19 +40,24 @@ class PostRepository extends Repository
         $queryPrev->setLimit(1);
 
         if ($queryPrev->count() >= 1) {
-            $result = $queryPrev->execute()[0];
+            /* @var \Rms\Typo3Blog\Domain\Model\Post $post */
+            $post = $queryPrev->execute()[0];
+            $result = $post;
         } else {
             $queryLast = $this->createQuery();
             $queryLast->setOrderings(['uid' => QueryInterface::ORDER_DESCENDING]);
             $queryLast->setLimit(1);
-            $result = $queryLast->execute()[0];
+
+            /* @var \Rms\Typo3Blog\Domain\Model\Post $post */
+            $post = $queryLast->execute()[0];
+            $result = $post;
         }
 
         return $result;
     }
 
     /**
-     * @return QueryResultInterface|object[] The query result object or an array if $returnRawQueryResult is TRUE
+     * @return \TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface|null
      */
     public function getNextPost(int $post)
     {
@@ -67,12 +72,17 @@ class PostRepository extends Repository
         $queryNext->setLimit(1);
 
         if ($queryNext->count() >= 1) {
-            $result = $queryNext->execute()[0];
+            /* @var \Rms\Typo3Blog\Domain\Model\Post $post */
+            $post = $queryNext->execute()[0];
+            $result = $post;
         } else {
             $queryFirst = $this->createQuery();
             $queryFirst->setOrderings(['uid' => QueryInterface::ORDER_ASCENDING]);
             $queryFirst->setLimit(1);
-            $result = $queryFirst->execute()[0];
+
+            /* @var \Rms\Typo3Blog\Domain\Model\Post $post */
+            $post = $queryFirst->execute()[0];
+            $result = $post;
         }
 
         return $result;
