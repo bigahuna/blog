@@ -27,33 +27,33 @@ class Post extends AbstractEntity
      * title
      *
      * @var string
-     * @Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $title = '';
 
     /**
      * typo3_blog teaser
      *
      * @var string
-     * @Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $teaser = '';
 
     /**
      * one or more typo3_blog images
      *
      * @var ObjectStorage<FileReference>
-     * @Validate("NotEmpty")
-     * @Cascade("remove")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
+    #[Cascade(['value' => 'remove'])]
     protected $images;
 
     /**
      * typo3_blog content
      *
      * @var string
-     * @Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $content = '';
 
     /**
@@ -67,8 +67,8 @@ class Post extends AbstractEntity
      * slug
      *
      * @var string
-     * @Validate("NotEmpty")
      */
+    #[Validate(['validator' => 'NotEmpty'])]
     protected $slug = '';
 
     protected string $keywords = '';
