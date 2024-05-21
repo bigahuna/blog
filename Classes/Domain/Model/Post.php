@@ -96,7 +96,7 @@ class Post extends AbstractEntity
      *
      * @return void
      */
-    public function initializeObject()
+    public function initializeObject(): void
     {
         $this->categories =  new ObjectStorage();
         $this->images = new ObjectStorage();
@@ -204,7 +204,7 @@ class Post extends AbstractEntity
      * @param ObjectStorage<Category> $categories
      * @return void
      */
-    public function setCategories(ObjectStorage $categories)
+    public function setCategories(ObjectStorage $categories): void
     {
         $this->categories = $categories;
     }
