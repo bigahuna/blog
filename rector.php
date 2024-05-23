@@ -43,6 +43,7 @@ return RectorConfig::configure()
         // @see https://github.com/sabbelasichon/typo3-rector/issues/2536
         __DIR__ . '/**/Configuration/ExtensionBuilder/*',
         __DIR__ . '/**/Tests/Unit/*',
+        __DIR__ . '/Tests/Unit/*',
         __DIR__ . '/vendor/*',
         '/vendor/*',
         NameImportingPostRector::class => [
