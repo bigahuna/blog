@@ -17,7 +17,7 @@ class BasicTest extends FunctionalTestCase
      * @var array
      */
     protected $testExtensionsToLoad = [
-        'typo3conf/ext/typo3_blog',
+        'packages/typo3_blog',
     ];
 
     /**
