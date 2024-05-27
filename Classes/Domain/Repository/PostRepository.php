@@ -4,22 +4,15 @@ declare(strict_types=1);
 
 namespace Rms\Typo3Blog\Domain\Repository;
 
+use Rms\Typo3Blog\Domain\Model\Post;
 use TYPO3\CMS\Extbase\DomainObject\DomainObjectInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
- * This file is part of the "Typo3Blog" Extension for TYPO3 CMS.
- *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * (c) 2022 Mike <mkettel@gmail.com>, visisblebits.de
- */
-
-/**
  * The repository for Posts
+ * @extends \TYPO3\CMS\Extbase\Persistence\Repository<\Rms\Typo3Blog\Domain\Model\Post>
  */
 class PostRepository extends Repository
 {
@@ -90,9 +83,9 @@ class PostRepository extends Repository
     }
 
     /**
-     * @return QueryResultInterface|object[] The query result object or an array if $returnRawQueryResult is TRUE
+     * @return \TYPO3\CMS\Extbase\Persistence\QueryResultInterface<int, Post>
      */
-    public function getLatestPosts(int $limit = 30)
+    public function getLatestPosts(int $limit = 30): \TYPO3\CMS\Extbase\Persistence\QueryResultInterface
     {
         $query = $this->createQuery();
         $query->setOrderings(['uid' => QueryInterface::ORDER_DESCENDING]);

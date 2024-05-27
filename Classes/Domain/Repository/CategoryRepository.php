@@ -8,15 +8,8 @@ use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\Repository;
 
 /**
- * This file is part of the "Typo3Blog" Extension for TYPO3 CMS.
- *
- * For the full copyright and license information, please read the
- * LICENSE.txt file that was distributed with this source code.
- *
- * (c) 2022 Mike <mkettel@gmail.com>, visisblebits.de
- */
-/**
  * The repository for Categories
+ * @extends \TYPO3\CMS\Extbase\Persistence\Repository<\Rms\Typo3Blog\Domain\Model\Category>
  */
 class CategoryRepository extends Repository
 {

@@ -5,10 +5,10 @@ name: PHP_Rector
 on:
   pull_request:
     branches:
-      - main
+      - main*
   push:
     branches:
-      - main
+      - main*
 
 jobs:
   run:
@@ -19,7 +19,7 @@ jobs:
         #operating-system: [ubuntu-22.04]
         operating-system: [ubuntu-latest]
         #php-version: ['8.1', '8.2']
-        php-version: ['8.2']
+        php-version: ['8.2', '8.3']
 
     name: Testing PHP ${{ matrix.php-version }} on ${{ matrix.operating-system }}
 
@@ -30,9 +30,10 @@ jobs:
           extensions: json,intl,mbstring
 
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - run: composer validate
       - run: composer install --no-progress
+      #- run: vendor/bin/rector process --dry-run --debug
       - run: vendor/bin/rector process --dry-run
       #- run: vendor/bin/phpstan analyse -c phpstan.neon

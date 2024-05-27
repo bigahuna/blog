@@ -9,7 +9,7 @@ This is a basic blogging system extension for TYPO3
 
 ## Setup
 
-### Composer install 
+### Composer install
 
 In your composer.json extend the repositories section with the "type": "vcs" part:
 
@@ -39,7 +39,7 @@ Now add the classpath to the autoloading section
 ```json
 "autoload": {
     "psr-4": {
-      "Rms\\Typo3Blog\\": "public/typo3conf/ext/typo3_blog/Classes/"      
+      "Rms\\Typo3Blog\\": "packages/typo3_blog/Classes/"
     }
   },
 ```
